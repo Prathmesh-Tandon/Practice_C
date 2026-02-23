@@ -38,7 +38,7 @@ int main (){
     sorted(arr1,n1);
 
     printf("\n");
-    printf("No of distinct element in array 1 is : %d", distinct(arr1,n1));
+    printf("\nNo of distinct element in array 1 is : %d\n", distinct(arr1,n1));
 
     printf("\n");
     printf("Largest element: %d\n", largest(arr1, n1));
@@ -47,7 +47,27 @@ int main (){
     decrement(arr1,n1);
 
     printf("\n");
-    free(arr1);   // always free dynamic memory
+    printf("\nPrepare array 2\n");
+    int n2=num_element();
+    int *arr2 = userarray(n2);
+    printf("before swap :\n");
+    display_array(arr1,n1);
+    display_array(arr2,n2);
+    printf("after swap entire arrays :\n");
+    swap_entire_arrays(&arr1, &arr2, &n1, &n2);
+    display_array(arr1,n1);
+    display_array(arr2,n2);
+    swap_arrays(arr1, arr2, n1,n2);
+    printf("Now swap only elements :\n");
+    display_array(arr1,n1);
+    display_array(arr2,n2);
+
+
+
+
+    printf("\n");
+    free(arr1);  // always free dynamic memory
+    free(arr2);
     return 0;
 }
 
@@ -81,25 +101,32 @@ bool sorted(int *arr, int n){
 int search(int *arr, int n, int x){
     for(int i = 0;i<n;i++){
         if (arr[i]==x){
-            printf("number found at index %d", i);
+            printf("\nnumber found at index %d", i);
             return i;
         }
     }
-    printf("Number not found\n");
+    printf("\nNumber not found");
     return -1;
 }
 
 void decrement(int *array,int n){
-    printf("printing array elements after decrement it by 1: \n");
+    printf("printing array elements before decrement: \n");
     for(int i = 0; i<n; i++){
-        array[i]=array[i]-1;
         printf("%d ", array[i]);
     }
+
+    printf("\nprinting array elements after decrement it by 1: \n");
+    int *copy = malloc(n * sizeof(int));
+    for (int a = 0 ; a<n; a++){
+        copy[a]=array[a]-1;
+        printf("%d ", copy[a]);
+    }
+    free(copy);
 }
 
 int num_element(){
     int n;
-    printf("No of elements in array 1: ");
+    printf("No of elements in array: ");
     scanf("%d", &n);
     return n;
 }
@@ -117,7 +144,7 @@ int* userarray(int n) {
         printf("Enter number at index [%d]: ", i);
         scanf("%d", &array[i]);
     }
-    printf("\nsize of user defined array is : %ld", n*sizeof(int) );
+    printf("\nsize of user defined array is : 4bytes * %d = %ld\n",n, n*sizeof(int) );
     // returning the final array pointer
     return array;
 }
