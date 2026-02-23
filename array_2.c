@@ -10,6 +10,23 @@ int largest(int *arr, int n){
     }
     return largest;
 }
+int second_largest(int *arr, int n){
+    int largest=0;
+    int second_largest = 0;
+    for (int i = 0 ; i<n ; i++){
+        if(arr[i]>largest){
+            largest = arr[i];
+        }
+    }
+    for (int i = 0 ; i<n; i++){
+        if (arr[i]<largest){
+            if (arr[i]> second_largest){
+                second_largest=arr[i];
+            }
+        }
+    }
+    return second_largest;
+}
 
 void swap_arrays(int *arr1, int *arr2, int n1, int n2){
     int len = n1<n2?n1:n2;

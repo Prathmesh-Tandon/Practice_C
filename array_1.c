@@ -23,7 +23,7 @@ int main (){
     }
 
     printf("\n");
-    printf("reverse Traversal through user input array :\n");
+    printf("Reverse Traversal through user input array :\n");
     for (int i = n1-1; i >=0; i--) {
         printf("%d ", arr1[i]);
     }
@@ -38,10 +38,13 @@ int main (){
     sorted(arr1,n1);
 
     printf("\n");
-    printf("\nNo of distinct element in array 1 is : %d\n", distinct(arr1,n1));
+    printf("No of distinct element in array 1 is : %d\n", distinct(arr1,n1));
 
     printf("\n");
     printf("Largest element: %d\n", largest(arr1, n1));
+
+    printf("\n");
+    printf("Second Largest element: %d\n", second_largest(arr1, n1));
 
     printf("\n");
     decrement(arr1,n1);
@@ -61,9 +64,6 @@ int main (){
     printf("Now swap only elements :\n");
     display_array(arr1,n1);
     display_array(arr2,n2);
-
-
-
 
     printf("\n");
     free(arr1);  // always free dynamic memory
@@ -101,12 +101,12 @@ bool sorted(int *arr, int n){
 int search(int *arr, int n, int x){
     for(int i = 0;i<n;i++){
         if (arr[i]==x){
-            printf("\nnumber found at index %d", i);
+            printf("\nnumber found at index %d\n", i);
             return i;
         }
     }
-    printf("\nNumber not found");
-    return -1;
+    printf("\nNumber not found\n");
+    return 1;
 }
 
 void decrement(int *array,int n){
