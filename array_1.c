@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include<stdbool.h>
+#include "array_2.h"
 
 int num_element();
 int* userarray(int n);
@@ -28,9 +29,6 @@ int main (){
     }
 
     printf("\n");
-    decrement(arr1,n1);
-
-    printf("\n");
     int x;
     printf("enter a number to search in array: ");
     scanf("%d", &x);
@@ -40,11 +38,15 @@ int main (){
     sorted(arr1,n1);
 
     printf("\n");
-    int No_of_Distinct = distinct(arr1,n1);
-    printf("No of distinct element in array 1 is : %d", No_of_Distinct);
+    printf("No of distinct element in array 1 is : %d", distinct(arr1,n1));
 
     printf("\n");
+    printf("Largest element: %d\n", largest(arr1, n1));
 
+    printf("\n");
+    decrement(arr1,n1);
+
+    printf("\n");
     free(arr1);   // always free dynamic memory
     return 0;
 }
