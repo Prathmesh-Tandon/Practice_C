@@ -10,18 +10,18 @@
 
     # Topic 1.2:- ARRAY
         #array_2.c covers the following :-
-            1. largest in array
-            2. second largest in array
-            3. swap two array elements
-            4. swap two entire array
-            5. insert element at the end
-            6. insert element at any position
-            7. delete element from array
+            7. largest in array
+            8. second largest in array
+            9. swap two array elements
+            10. swap two entire array
+            11. insert element at the end
+            12. insert element at any position
+            13. delete element from array
 
     # Topic 1.3:- ARRAY
         #array_3.c covers the following :-
-            1. Reverse an array
-            2. Left rotate an array by one
-            3. Left rotate an array by D places
-            4. maximum occured integer
-            5. strongest neighbour
+            14. Reverse an array
+            15. Left rotate an array by one
+            16. Left rotate an array by D places
+            17. maximum occured integer
+            18. strongest neighbour
