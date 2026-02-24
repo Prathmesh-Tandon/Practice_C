@@ -14,3 +14,6 @@
             2. second largest in array
             3. swap two array elements
             4. swap two entire array
+            5. insert element at the end
+            6. insert element at any position
+            7. delete element from array

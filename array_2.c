@@ -53,3 +53,8 @@ void display_array( int *array, int n){
     }
     printf("\n");
 }
+
+int insert_end(int array[], int n, int key){
+    array[n]=key;
+    return n+1;
+}

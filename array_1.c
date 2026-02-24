@@ -66,6 +66,13 @@ int main (){
     display_array(arr2,n2);
 
     printf("\n");
+    int key;
+    printf("Enter element you want to add in the end of array 1: ");
+    scanf("%d", &key);
+    n1 = insert_end(arr1, n1, key);
+    display_array(arr1,n1);
+
+    printf("\n");
     free(arr1);  // always free dynamic memory
     free(arr2);
     return 0;
