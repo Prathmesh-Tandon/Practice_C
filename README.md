@@ -17,3 +17,11 @@
             5. insert element at the end
             6. insert element at any position
             7. delete element from array
+
+    # Topic 1.3:- ARRAY
+        #array_3.c covers the following :-
+            1. Reverse an array
+            2. Left rotate an array by one
+            3. Left rotate an array by D places
+            4. maximum occured integer
+            5. strongest neighbour
