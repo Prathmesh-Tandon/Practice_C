@@ -73,6 +73,25 @@ int main (){
     display_array(arr1,n1);
 
     printf("\n");
+    int pos;
+    printf("which position to add element in array: ");
+    scanf("%d", &pos);   
+    n1= insert(arr1,n1,pos,key);
+    display_array(arr1,n1);
+    
+    printf("\n");
+    printf("enter a number to search in array 2: ");
+    scanf("%d", &x);
+    int index = search(arr2,n2,x);
+    if (index == -1) {
+    printf("Element not found. Cannot delete.\n");
+    }
+    else {
+    n2 = delete(arr2, n2, index);
+    printf("Deleting element...\n");
+    display_array(arr2, n2);
+    }
+    printf("\n");
     free(arr1);  // always free dynamic memory
     free(arr2);
     return 0;
@@ -113,7 +132,7 @@ int search(int *arr, int n, int x){
         }
     }
     printf("\nNumber not found\n");
-    return 1;
+    return -1;
 }
 
 void decrement(int *array,int n){

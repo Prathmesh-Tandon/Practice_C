@@ -58,3 +58,18 @@ int insert_end(int array[], int n, int key){
     array[n]=key;
     return n+1;
 }
+
+int insert(int *arr, int n, int pos, int value){
+    for(int i = n-1 ; i>=pos ; i--){
+        arr[i+1]=arr[i];
+    }
+    arr[pos]=value;
+    return n+1;
+}
+
+int delete(int *array, int n, int index){
+    for(int i = index ; i<n-1 ;i++){
+        array[i]=array[i+1];
+    }
+    return n-1;
+}
