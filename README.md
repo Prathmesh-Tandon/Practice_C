@@ -12,4 +12,5 @@
         #array_2.c covers the following :-
             1. largest in array
             2. second largest in array
-            3. swap two array
+            3. swap two array elements
+            4. swap two entire array

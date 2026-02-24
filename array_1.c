@@ -6,7 +6,7 @@
 int num_element();
 int* userarray(int n);
 void decrement(int *array,int n);
-int search(int arr[], int n, int x);
+int search(int *arr, int n, int x);
 bool sorted(int *arr, int n);
 int distinct(int *arr, int n);
 
