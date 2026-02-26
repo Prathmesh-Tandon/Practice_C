@@ -22,6 +22,4 @@
         #array_3.c covers the following :-
             14. Reverse an array
             15. Left rotate an array by one
-            16. Left rotate an array by D places
-            17. maximum occured integer
-            18. strongest neighbour
+            16. Left rotate an array by D place

@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include<stdbool.h>
 #include "array_2.h"
+#include "array_3.h"
 
 int num_element();
 int* userarray(int n);
@@ -91,7 +92,24 @@ int main (){
     printf("Deleting element...\n");
     display_array(arr2, n2);
     }
+
+    printf("\n reverse before & after\n");
+    display_array(arr1,n1);
+    reverse(arr1,0,n1-1);
+    display_array(arr1,n1);
+    
+    printf("\n reverse before & after\n");
+    display_array(arr1,n1);
+    Left_rotate_by_one(arr1,n1);
+    display_array(arr1,n1);
+
+    printf("\n reverse before & after\n");
+    display_array(arr1,n1);
+    Left_rotate_by_d(arr1,n1,3);
+    display_array(arr1,n1);
+
     printf("\n");
+
     free(arr1);  // always free dynamic memory
     free(arr2);
     return 0;
